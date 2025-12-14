@@ -1,65 +1,60 @@
 import Image from "next/image";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <div className="bg-white">
+        
+        <Navbar />
+        <div className="flex bg-[#061621] rounded-b-full flex-col min-h-[100vh] items-center justify-center w-full   text-center">
+          <div className="font-bold text-2xl text-white">
+            Welcome to{' '}
+            <a className="text-blue-600" href="https://hospital-management.com">
+              Hospital Management System!
+            </a>
+          </div>
+          <div className="flex justify-center text-center items-center text-white">
+            <div className="rounded-3xl bg-[#091f2a] mx-2 my-4 w-[300px] h-[400px] hover:scale-105 duration-300 p-2">
+              <div className="rounded-3xl  "><img src="./doctor.webp" className="overflow-clip" alt="" /></div>
+              <p className="m-2 font-bold text-sm">Worlds best team! “We Serve With Compassion and Responsibility.”</p>
+              <a href="/Department">
+             <button className="mt-3 w-[120px] font-bold bg-[#061621] p-1.5 rounded-[4px] cursor-pointer">Our Team</button></a>
+            </div>
+
+            <div className=" rounded-3xl text-sm bg-[#091f2a] text-start mx-2 my-4 w-[300px] h-[400px] text-white hover:scale-105 duration-300 p-2">
+              <p className="mt-3 font-bold ">1. “The Hospital Management System is designed to streamline the operations of healthcare facilities by enabling efficient management of patients, doctors, appointments, billing, and medical records.”
+              </p>
+              <p className="m-1 font-bold">2. “This project provides a digital solution to reduce paperwork, automate hospital workflows, and ensure quicker delivery of healthcare services.”
+              </p>
+              <p className="m-1 font-bold">3.“The system offers a centralized platform that improves coordination between departments and enhances the overall patient care experience.”
+              </p>
+              <p className="m-1 font-bold">4. “The goal of the Hospital Management System is to create an organized, user-friendly, and secure environment for managing hospital activities.”
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="bg-[#0c4746] rounded-t-4xl m-0.5 min-h-[100vh] grid grid-cols-3 gap-4 p-10">
+          <div className=" h-[80vh] flex flex-col items-center justify-center">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.085549772415!2d77.20768587549836!3d28.567193675700494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8367180c6de2ecc2!2sAll%20India%20Institute%20Of%20Medical%20Sciences%20Delhi!5e0!3m2!1sen!2sin!4v1764187895145!5m2!1sen!2sin"
+    width="368"
+    height="450"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+  <div className="font-bold m-2 text-white ">Our Location!</div>
+</div>
+          <div className="bg-amber-500 h-[80vh] flex flex-col justify-center" ><img src="https://webimages.mongodb.com/_com_assets/cms/l96zn4bddbbpoe0zs-combined.svg?auto=format%252Ccompress" alt="" /></div>
+          <div className="bg-black flex flex-col justify-center items-center h-[80vh]"><iframe width="370" height="315" src="https://www.youtube.com/embed/X8gIEUaflIU?si=wQawdBYRv2E2ymue" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <div></div>
+          </div>
         </div>
-      </main>
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
