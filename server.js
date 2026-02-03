@@ -9,8 +9,6 @@ app.prepare().then(() => {
   const server = http.createServer((req, res) => {
     handle(req, res);
   });
-
-  // 🔥 attach socket.io here
   initSocket(server);
 
   server.listen(3000, () => {
