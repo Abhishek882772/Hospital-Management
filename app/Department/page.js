@@ -2,10 +2,20 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function DepartmentPage() {
   const [users, setusers] = useState([]);
+  const router = useRouter();
 
+  const handleClick = (person) => {
+    alert(`Chat with ${person.name} for appointment booking...`);
+    let name = person.name;
+  if (name.includes(" ")) { name = name.replaceAll(" ", "-");} 
+  else name = name;
+
+  router.push(`/chat?name=${name}`);
+};
   useEffect(() => {
   async function loaddata() {
 
@@ -124,8 +134,8 @@ export default function DepartmentPage() {
                       {person.experience}
                     </p>
 
-                    <button className="mt-3 bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm hover:bg-blue-700 transition">
-                      Contact
+                    <button onClick={() => handleClick(person)} className="mt-3 bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm hover:bg-blue-700 transition">
+                      Contact And Book Appointment
                     </button>
                   </div>
                 </div>
@@ -135,7 +145,7 @@ export default function DepartmentPage() {
         ))}
       </div>
       <div className="flex justify-center bg-[#00ff6a] h-0.5 rounded-2xl my-9 w-[98vw]"></div>
-      <div className="text-white font-bold text-2xl">Our Online Team</div>
+      <div className="text-white font-bold text-2xl">Newely Registered Members</div>
       {users.length===0 && <p>...Loading</p>}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {users.map((user, i) => (

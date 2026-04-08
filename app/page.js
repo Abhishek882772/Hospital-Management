@@ -20,7 +20,7 @@ export default function Home() {
               <div className="rounded-3xl  "><img src="./doctor.webp" className="overflow-clip" alt="" /></div>
               <p className="m-2 font-bold text-sm">Worlds best team! “We Serve With Compassion and Responsibility.”</p>
               <a href="/Department">
-             <button className="mt-3 w-[120px] font-bold bg-[#061621] p-1.5 rounded-[4px] cursor-pointer">Our Team</button></a>
+             <button className="mt-3 w-[180px] font-bold bg-[#061621] p-1.5 rounded-[4px] cursor-pointer">Book Appointment</button></a>
             </div>
 
             <div className=" rounded-3xl text-sm bg-[#091f2a] text-start mx-2 my-4 w-[300px] h-[400px] text-white hover:scale-105 duration-300 p-2">
