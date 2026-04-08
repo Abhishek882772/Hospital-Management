@@ -10,11 +10,7 @@ export default function DepartmentPage() {
 
   const handleClick = (person) => {
     alert(`Chat with ${person.name} for appointment booking...`);
-    let name = person.name;
-  if (name.includes(" ")) { name = name.replaceAll(" ", "-");} 
-  else name = name;
-
-  router.push(`/chat?name=${name}`);
+  router.push(`/chat`);
 };
   useEffect(() => {
   async function loaddata() {
